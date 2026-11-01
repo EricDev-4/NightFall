@@ -1,0 +1,228 @@
+[gd_scene format=3 uid="uid://dlrbaj83qqbv3"]
+
+[ext_resource type="Script" uid="uid://bwh7ugdbuqe54" path="res://Scripts/Character.cs" id="1_tgux0"]
+[ext_resource type="Texture2D" uid="uid://dluj5p4t5rsm0" path="res://Assets/Character/OldMan.png" id="2_tgux0"]
+[ext_resource type="PackedScene" uid="uid://c0rp0hwvv8pfb" path="res://Scene/axe.tscn" id="4_46cb6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46cb6"]
+atlas = ExtResource("2_tgux0")
+region = Rect2(0, 2, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep1am"]
+atlas = ExtResource("2_tgux0")
+region = Rect2(16, 2, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ht62"]
+atlas = ExtResource("2_tgux0")
+region = Rect2(32, 2, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cgd8"]
+atlas = ExtResource("2_tgux0")
+region = Rect2(48, 2, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bosnt"]
+atlas = ExtResource("2_tgux0")
+region = Rect2(64, 2, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1jne"]
+atlas = ExtResource("2_tgux0")
+region = Rect2(80, 2, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oncsw"]
+atlas = ExtResource("2_tgux0")
+region = Rect2(96, 2, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp0d1"]
+atlas = ExtResource("2_tgux0")
+region = Rect2(112, 2, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk2ye"]
+atlas = ExtResource("2_tgux0")
+region = Rect2(128, 2, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2g5y"]
+atlas = ExtResource("2_tgux0")
+region = Rect2(144, 2, 16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qkdps"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46cb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ep1am")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ht62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cgd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bosnt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1jne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oncsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cp0d1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uk2ye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2g5y")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_46cb6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ep1am"]
+resource_name = "slash"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.5, -2),
+"update": 0,
+"values": [0.0, -3.6826446]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.95)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawn_slash"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_2ht62"]
+resource_name = "sword_return"
+length = 0.65
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.65),
+"transitions": PackedFloat32Array(-2, -2, 0.5),
+"update": 0,
+"values": [-3.6826446, -3.6826446, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.65),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(0.8, 0.95), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1cgd8"]
+_data = {
+&"RESET": SubResource("Animation_46cb6"),
+&"slash": SubResource("Animation_ep1am"),
+&"sword_return": SubResource("Animation_2ht62")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fl5hb"]
+radius = 4.0
+height = 16.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1217811091]
+z_index = 1
+script = ExtResource("1_tgux0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=763359788]
+sprite_frames = SubResource("SpriteFrames_qkdps")
+animation = &"Walk"
+frame_progress = 0.31701803
+
+[node name="WeaponPivot" type="Node2D" parent="." unique_id=742108683]
+position = Vector2(3, 5)
+
+[node name="AttackPivot" type="Node2D" parent="WeaponPivot" unique_id=1053706792]
+
+[node name="Axe" parent="WeaponPivot/AttackPivot" unique_id=1801612544 instance=ExtResource("4_46cb6")]
+position = Vector2(11.155, 0)
+rotation = 0.7958701
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WeaponPivot/AttackPivot" unique_id=603242345]
+libraries/ = SubResource("AnimationLibrary_1cgd8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1257486112]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_fl5hb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2022223197]
+zoom = Vector2(5, 5)
+
+[connection signal="animation_finished" from="WeaponPivot/AttackPivot/AnimationPlayer" to="." method="OnAnimationFinished"]

@@ -1,0 +1,513 @@
+[gd_scene format=3 uid="uid://bbcepeg86hq44"]
+
+[ext_resource type="Texture2D" uid="uid://cr3a3cqbssein" path="res://Assets/AssetsStore/UI/Inventory/Inventory_1.png" id="background"]
+[ext_resource type="Texture2D" uid="uid://coc2lbpktuxl3" path="res://Assets/AssetsStore/UI/Inventory/Inventory-Cell.png" id="cell"]
+[ext_resource type="Texture2D" uid="uid://bq8o3h3vuguy4" path="res://Assets/AssetsStore/UI/Inventory/Inventory_Close_Not-Pressed.png" id="close"]
+[ext_resource type="Texture2D" uid="uid://dn1femvxi2mqy" path="res://Assets/AssetsStore/UI/Inventory/Inventory_Close_Pressed.png" id="pressed"]
+[ext_resource type="Script" uid="uid://dgrpj3ejyo5me" path="res://Scripts/InventoryUI.cs" id="script"]
+[ext_resource type="Texture2D" uid="uid://bqaxr4wjcvr1t" path="res://Assets/AssetsStore/UI/Inventory/Inventory-Chosen.png" id="selected"]
+
+[node name="InventoryUI" type="CanvasLayer" unique_id=421666627]
+script = ExtResource("script")
+
+[node name="Inventory" type="Control" parent="." unique_id=1007181998]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.0
+offset_top = -182.0
+offset_right = 286.0
+offset_bottom = 182.0
+
+[node name="Background" type="TextureRect" parent="Inventory" unique_id=349501356]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("background")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="Inventory" unique_id=1122584697]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 22.0
+offset_right = 300.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 25
+text = "INVENTORY"
+
+[node name="Close" type="TextureButton" parent="Inventory" unique_id=1829833573]
+layout_mode = 0
+offset_left = 516.0
+offset_top = 20.0
+offset_right = 548.0
+offset_bottom = 52.0
+texture_normal = ExtResource("close")
+texture_pressed = ExtResource("pressed")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Grid" type="GridContainer" parent="Inventory" unique_id=1378001121]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 68.0
+offset_right = 510.0
+offset_bottom = 328.0
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 5
+columns = 6
+
+[node name="Slot1" type="TextureButton" parent="Inventory/Grid" unique_id=518288681]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Inventory/Grid/Slot1" unique_id=448236879]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Slot2" type="TextureButton" parent="Inventory/Grid" unique_id=1061144084]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Inventory/Grid/Slot2" unique_id=1046760514]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Slot3" type="TextureButton" parent="Inventory/Grid" unique_id=604471511]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Inventory/Grid/Slot3" unique_id=985161936]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Slot4" type="TextureButton" parent="Inventory/Grid" unique_id=580064783]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Inventory/Grid/Slot4" unique_id=1978989242]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Slot5" type="TextureButton" parent="Inventory/Grid" unique_id=1298951260]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Inventory/Grid/Slot5" unique_id=540628373]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Slot6" type="TextureButton" parent="Inventory/Grid" unique_id=1962709264]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Inventory/Grid/Slot6" unique_id=297492437]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Slot7" type="TextureButton" parent="Inventory/Grid" unique_id=1079249348]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot8" type="TextureButton" parent="Inventory/Grid" unique_id=2057613868]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot9" type="TextureButton" parent="Inventory/Grid" unique_id=380667796]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot10" type="TextureButton" parent="Inventory/Grid" unique_id=1349709352]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot11" type="TextureButton" parent="Inventory/Grid" unique_id=1099273109]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot12" type="TextureButton" parent="Inventory/Grid" unique_id=1578564803]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot13" type="TextureButton" parent="Inventory/Grid" unique_id=1740981451]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot14" type="TextureButton" parent="Inventory/Grid" unique_id=487558124]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot15" type="TextureButton" parent="Inventory/Grid" unique_id=1688272192]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot16" type="TextureButton" parent="Inventory/Grid" unique_id=1317227142]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot17" type="TextureButton" parent="Inventory/Grid" unique_id=931266683]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot18" type="TextureButton" parent="Inventory/Grid" unique_id=340144837]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot19" type="TextureButton" parent="Inventory/Grid" unique_id=880484506]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot20" type="TextureButton" parent="Inventory/Grid" unique_id=1473337611]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot21" type="TextureButton" parent="Inventory/Grid" unique_id=1309702759]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot22" type="TextureButton" parent="Inventory/Grid" unique_id=736748585]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot23" type="TextureButton" parent="Inventory/Grid" unique_id=660651617]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Slot24" type="TextureButton" parent="Inventory/Grid" unique_id=452821759]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Hotbar" type="HBoxContainer" parent="." unique_id=283846311]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -100.0
+offset_right = 240.0
+offset_bottom = -28.0
+mouse_filter = 0
+theme_override_constants/separation = 8
+
+[node name="Slot1" type="TextureButton" parent="Hotbar" unique_id=1807934574]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Hotbar/Slot1" unique_id=307924750]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Number" type="Label" parent="Hotbar/Slot1" unique_id=424734576]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 16
+text = "1"
+
+[node name="Slot2" type="TextureButton" parent="Hotbar" unique_id=7007183]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Hotbar/Slot2" unique_id=1251457745]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Number" type="Label" parent="Hotbar/Slot2" unique_id=1087718991]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 16
+text = "2"
+
+[node name="Slot3" type="TextureButton" parent="Hotbar" unique_id=2114029246]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Hotbar/Slot3" unique_id=411959498]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Number" type="Label" parent="Hotbar/Slot3" unique_id=1362301930]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 16
+text = "3"
+
+[node name="Slot4" type="TextureButton" parent="Hotbar" unique_id=1418814772]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Hotbar/Slot4" unique_id=1093481876]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Number" type="Label" parent="Hotbar/Slot4" unique_id=1504796821]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 16
+text = "4"
+
+[node name="Slot5" type="TextureButton" parent="Hotbar" unique_id=1219802141]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Hotbar/Slot5" unique_id=1183194027]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Number" type="Label" parent="Hotbar/Slot5" unique_id=1287635812]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 16
+text = "5"
+
+[node name="Slot6" type="TextureButton" parent="Hotbar" unique_id=113267052]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("cell")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Selection" type="TextureRect" parent="Hotbar/Slot6" unique_id=1112969261]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("selected")
+expand_mode = 1
+
+[node name="Number" type="Label" parent="Hotbar/Slot6" unique_id=1059210501]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 16
+text = "6"

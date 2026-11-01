@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dh5sbb8rjrvpn"]
+
+[ext_resource type="Texture2D" uid="uid://csoosc7xxjker" path="res://Assets/Enviroment/Wood.PNG" id="1_x4lws"]
+[ext_resource type="Texture2D" uid="uid://cw542fnkp5w27" path="res://Assets/Enviroment/Wood_Shadow.PNG" id="2_5k5as"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qkdps"]
+radius = 4.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkdps"]
+size = Vector2(12, 6)
+
+[node name="Wood" type="RigidBody2D" unique_id=1763599167]
+collision_layer = 4
+collision_mask = 4
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=529815293]
+shape = SubResource("CircleShape2D_qkdps")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=429984698]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_x4lws")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1457484048]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1515491592]
+shape = SubResource("RectangleShape2D_qkdps")
+
+[node name="Wood_Shadow" type="Sprite2D" parent="." unique_id=1855537425]
+z_index = -1
+position = Vector2(0, 0.99999994)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_5k5as")

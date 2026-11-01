@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://45qyhwwn1sk8"]
+
+[ext_resource type="Texture2D" uid="uid://r1ae1e5ky6fl" path="res://Assets/Enviroment/Rock.png" id="1_7tgmd"]
+[ext_resource type="Texture2D" uid="uid://c74hbcgq6b1cr" path="res://Assets/Enviroment/Rock_shadow.png" id="2_jf6km"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qkdps"]
+radius = 9.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkdps"]
+
+[node name="Rock" type="Node2D" unique_id=821161272]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=219571776]
+texture = ExtResource("1_7tgmd")
+
+[node name="Shadow" type="Sprite2D" parent="Sprite2D" unique_id=1056084756]
+z_index = -1
+texture = ExtResource("2_jf6km")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=24964377]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=323744317]
+position = Vector2(1, -2)
+shape = SubResource("CircleShape2D_qkdps")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=321184903]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=795974945]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_qkdps")

@@ -23,3 +23,13 @@ mono_crash.*.json
 *.exe
 # Uncomment if your project does not version PCK files as runtime dependencies.
 # *.pck
+
+# Local editor and .NET build files
+/android/
+.idea/
+.vs/
+**/bin/
+**/obj/
+*.user
+.env
+.env.*
